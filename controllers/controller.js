@@ -1,4 +1,5 @@
 const express = require("express");
+const burgerObj = require("../models/model")
 
 const router = express.Router();
 
@@ -7,7 +8,16 @@ router.get("/", (req, res) => {
 })
 
 router.get("/burgers", (req, res) => {
-    res.render("index")
+    //data is a new variable that will reference "data" in the cb functions
+    burgerObj.showBurgers(data => {
+        console.log("SHOW BURGER DATA TEST: ", data);
+        res.end();
+    });
+    
+    // res.render("index");
+
 });
+
+
 
 module.exports = router;
