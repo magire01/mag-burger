@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
     burgerData.showBurgers(data => {
-        console.log("PreDevour Test: ", data);
         const burgerObj = {
             burger: data,
         }
@@ -14,23 +13,16 @@ router.get("/", (req, res) => {
     });
 });
 
-// router.get("/", (req, res) => {
-//     burgerData.filterDev(data => {
-//         console.log("SHOW BURGER DATA TEST: ", data);
-//         const burgerObjDev = {
-//             burgerDev: data
-//         }
-//         console.log("BURGER TEST: ", burgerObjDev)
-//         res.render("index", burgerObjDev)
-//     });
-// })
-
-router.get("/burgers", (req, res) => {
-    //data is a new variable that will reference "data" in the cb functions
-    
-
+router.post("/api/burgers", (req, res) => {
+    burgerData.insertBurgers(req.body, data => {
+        if(!data.affectedRows) {
+            res.status(500).end();
+        }
+        res.json({
+            id: data.insertId
+        });
+    });
 });
-
 
 
 module.exports = router;

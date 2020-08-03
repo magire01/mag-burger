@@ -8,21 +8,7 @@ const burgerData = {
             cb(data);
         });
     },
-    filterNotDev: (cb) => {
-        connection.query("SELECT id, burger, devoured FROM burger WHERE devoured = 0", (err, res) => {
-            if (err) throw err;
-            console.log("SHOW NOT DEVOURED TEST: ", res);
-            cb(res);
-        });
-        
-    },
-    filterDev: (cb) => {
-        connection.query("SELECT id, burger, devoured FROM burger WHERE devoured = 1", (err, resDev) => {
-            if (err) throw err;
-            console.log("SHOW NOT DEVOURED TEST: ", resDev);
-            cb(resDev);
-        });
-    },
+
     insertBurgers: (insertData, cb) => {
         //do not have rowData and objData yet
         orm.insertOne("burger", insertData, data => {
