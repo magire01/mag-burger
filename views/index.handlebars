@@ -1,16 +1,35 @@
 <div class="col-md-4">
     <h3>Not Devoured</h3>
+
+    <ul>
+        {{#each burger}}
+            {{#unless devoured}}
+                <p> {{ id }} {{ burger }} </p>
+            {{/unless}}
+        {{/each}}
+    </ul>
 </div>
 
 <div class="col-md-4">
     <h3>Main Div</h3>
     <div class="row">
-        <texarea></texarea>
-        <button>Submit</button>
+        <texarea>
+            <input></input>
+            <button>Submit</button>
+        </texarea>
+        
     </div>
     
 </div>
 
 <div class="col-md-4">
     <h3>Devoured</h3>
+
+    <ul>
+        {{#each burger}}
+            {{#if devoured}}
+                <p> {{ id }} {{ burger }} </p>
+            {{/if}}
+        {{/each}}
+    </ul>
 </div>
