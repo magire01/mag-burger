@@ -1,11 +1,11 @@
 <div class="col-md-4">
     <h3>Not Devoured</h3>
 
-    <ul id="burger-field1">
+    <ul id="not-dev">
         {{#each burger}}
             {{#unless devoured}}
                 <p> {{ id }} {{ burger }} </p>
-                <button class="devour" id="devour-btn" data-id="{{id}}">Devour!</button>
+                <button class="devour" id="devour-btn" data-id={{ id }}>Devour!</button>
             {{/unless}}
         {{/each}}
     </ul>
@@ -26,11 +26,11 @@
 <div class="col-md-4">
     <h3>Devoured</h3>
 
-    <ul>
+    <ul id="is-dev">
         {{#each burger}}
             {{#if devoured}}
                 <p> {{ id }} {{ burger }} </p>
-                <button class="delete" id="delete-btn" data-id="{{id}}">Delete!</button>
+                <button class="delete" id="delete-btn" data-id={{ id }}>Delete!</button>
             {{/if}}
         {{/each}}
     </ul>

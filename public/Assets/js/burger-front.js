@@ -17,9 +17,9 @@ $("body").on("click", "#submit-btn", (event) => {
 });
 
 
-$("body").on("click", "#devour-btn", () => {
+$("body").on("click", "#devour-btn", function() {
     console.log("Devour Test");
-    const tableID = $("#devour-btn").data("id");
+    const tableID = $(this).data("id");
     console.log(tableID);
     const newDevour = {
         devoured: 1
@@ -34,10 +34,9 @@ $("body").on("click", "#devour-btn", () => {
 
 });
 
-$("body").on("click", "#delete-btn", () => {
-    console.log("delete Test");
-    const tableID = $("#delete-btn").data("id");
-    console.log(tableID);
+$("body").on("click", "#delete-btn", function() {
+    console.log("delete Test"); 
+    const tableID = $(this).data("id");
     $.ajax(`/api/burgers/${tableID}`, {
         type: "DELETE"
     }).then(() => {
