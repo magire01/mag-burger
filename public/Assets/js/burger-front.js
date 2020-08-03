@@ -15,3 +15,21 @@ $("body").on("click", "#submit-btn", (event) => {
     })
 
 });
+
+
+$("body").on("click", "#devour-btn", () => {
+    console.log("Devour Test");
+    const tableID = $("#devour-btn").data("id");
+    console.log(tableID);
+    const newDevour = {
+        devoured: 1
+    }
+    $.ajax(`/api/burgers/${tableID}`, {
+        type: "PUT",
+        data: newDevour
+    }).then(() => {
+        console.log(tableID + " DEVOURED");
+        location.reload();
+    })
+
+});

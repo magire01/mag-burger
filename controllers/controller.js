@@ -24,5 +24,18 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
+router.put("/api/burgers/:id", (req, res) => {
+    console.log("id test", req)
+    const burgerId = req.params;
+    console.log("burger ID test", burgerId);
+    burgerData.updateBurgers({ devoured: 1 }, id = burgerId, data => {
+        if (!data.changedRows) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+          } else {
+            res.status(200).end();
+          }
+    });
+});
 
 module.exports = router;

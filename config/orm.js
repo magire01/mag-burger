@@ -11,7 +11,7 @@ class ORM {
             cb(data);
         });
     }
-    
+
     insertOne(table, insertData, cb) {
         connection.query("INSERT INTO ?? SET ?", [table, insertData], (err, data) => {
             if (err) throw err;
@@ -20,8 +20,8 @@ class ORM {
         });
     }
 
-    updateOne(table, rowData, objData, cb) {
-        connection.query("UPDATE ?? SET ? WHERE ? ", [table, rowData, objData], (err, data) => {
+    updateOne(table, rowData, objData, cb) { 
+        connection.query("UPDATE ?? SET ? WHERE ?", [table, rowData, objData], (err, data) => {
             if (err) throw err;
             console.log("ORM DATA TEST: ", data);
             cb(data);
