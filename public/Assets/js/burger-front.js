@@ -33,3 +33,16 @@ $("body").on("click", "#devour-btn", () => {
     })
 
 });
+
+$("body").on("click", "#delete-btn", () => {
+    console.log("delete Test");
+    const tableID = $("#delete-btn").data("id");
+    console.log(tableID);
+    $.ajax(`/api/burgers/${tableID}`, {
+        type: "DELETE"
+    }).then(() => {
+        console.log(tableID + " DELETED");
+        location.reload();
+    })
+
+});

@@ -29,6 +29,13 @@ class ORM {
     }
 
     //delete
+    deleteOne(table, objData, cb) { 
+        connection.query("DELETE FROM ?? WHERE ?", [table, objData], (err, data) => {
+            if (err) throw err;
+            console.log("ORM DATA TEST: ", data);
+            cb(data);
+        });
+    }
 }
 
 module.exports = new ORM (connection);

@@ -21,6 +21,13 @@ const burgerData = {
         orm.updateOne("burger", rowData, objData, data => {
             cb(data);
         })
+    },
+
+    deleteBurgers: (objData, cb) => {
+        //do not have rowData and objData yet
+        orm.deleteOne("burger", objData, data => {
+            cb(data);
+        })
     }
 }
 

@@ -30,6 +30,7 @@
         {{#each burger}}
             {{#if devoured}}
                 <p> {{ id }} {{ burger }} </p>
+                <button class="delete" id="delete-btn" data-id="{{id}}">Delete!</button>
             {{/if}}
         {{/each}}
     </ul>
