@@ -1,36 +1,44 @@
-<div class="col-md-4">
-    <h3>Not Devoured</h3>
-
+<div class="col-md-4 notDiv">
     <ul id="not-dev">
         {{#each burger}}
             {{#unless devoured}}
-                <p> {{ id }} {{ burger }} </p>
-                <button class="devour" id="devour-btn" data-id={{ id }}>Devour!</button>
+                <div class="row">
+                    <div class="col-md-8 burgerNameDiv">
+                        <p> {{ burger }} </p>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="devour" id="devour-btn" data-id={{ id }}>Devour!</button>
+                    </div>
+                </div>
             {{/unless}}
         {{/each}}
     </ul>
 </div>
 
 <div class="col-md-4">
-    <h3>Main Div</h3>
-    <div class="row">
+    <div class="row mainDiv">
+        <h5> Enter a burger name below! </h5>
         <texarea>
-            <input id="input-field"></input>
-            <button id="submit-btn">Submit</button>
+            <input class="row inputField center-block" id="input-field"></input>
+            <button class="row submitBtn center-block"id="submit-btn">Submit</button>
         </texarea>
         
     </div>
     
 </div>
 
-<div class="col-md-4">
-    <h3>Devoured</h3>
-
+<div class="col-md-4 devDiv">
     <ul id="is-dev">
         {{#each burger}}
             {{#if devoured}}
-                <p> {{ id }} {{ burger }} </p>
-                <button class="delete" id="delete-btn" data-id={{ id }}>Delete!</button>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="delete" id="delete-btn" data-id={{ id }}>Delete!</button>
+                    </div>
+                    <div class="col-md-8 burgerNameDiv2">
+                        <p> {{ burger }} </p>
+                    </div>
+                </div>
             {{/if}}
         {{/each}}
     </ul>

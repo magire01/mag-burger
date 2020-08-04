@@ -1,3 +1,102 @@
 body {
-    background-color: orange;
+    background-color: #ffc745;
 }
+
+.headerDiv h1 {
+    color: white;
+    text-align: center;
+}
+
+.headerDiv {
+    background-color: #8f511e;
+    text-align: center;
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: white;
+    border-width: 5px;
+}
+
+.mainDiv h3 {
+    font-size: 40px;
+
+}
+
+.mainDiv {
+    display: block;
+    text-align: center;
+    align-content: center;
+}
+
+.notDiv p {
+    color: #fffbe3;
+    font-size: 20px;
+}
+
+.burgerNameDiv {
+    background-color: #ff6600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.burgerNameDiv2 {
+    background-color: #ff6600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.devour {
+    width: 80px;
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 15px;
+    color: white;
+    background-color: brown;
+    border-color: #ff6600;
+    border-width: 2px;
+}
+
+.devDiv h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.devDiv p {
+    color: #fffbe3;
+    font-size: 20px;
+}
+
+.delete {
+    width: 80px;
+    height: 30px;
+    margin-top: 15px;
+    color: white;
+    background-color: brown;
+    border-color: #ff6600;
+    border-width: 2px;
+}
+
+.submitBtn {
+    background-color: #8f511e;
+    color: white;
+    width: 40%;
+    margin-top: 15px;
+    border-color: #ffdfc9;
+    border-width: 2px;
+}
+
+.inputField {
+    width: 400px;
+    height: 100px;
+    font-size: 25px;
+    background-color: #ffdfc9;
+    border-color: #8f511e;
+    border-width: 5px;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
