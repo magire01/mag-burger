@@ -35,7 +35,6 @@ $("body").on("click", "#devour-btn", function() {
 });
 
 $("body").on("click", "#delete-btn", function() {
-    console.log("delete Test"); 
     const tableID = $(this).data("id");
     $.ajax(`/api/burgers/${tableID}`, {
         type: "DELETE"
