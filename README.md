@@ -1,11 +1,10 @@
 # Burger App
 
-<h2>Burger App</h2> 
 <br>
 [https://mag-burger-master.herokuapp.com/](https://mag-burger-master.herokuapp.com/)
 <br>
 <br>
-![Main Screen](./public/Assets/img/burger.png)
+![Main Screen](public/Assets/img/burger.png)
 <br>
 <br>
 <br>
