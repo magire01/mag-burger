@@ -4,7 +4,7 @@
 [https://mag-burger-master.herokuapp.com/](https://mag-burger-master.herokuapp.com/)
 <br>
 <br>
-![Main Screen](/Assets/img/burger.png)
+![Main Screen](Assets/img/burger.png)
 <br>
 <br>
 <br>
