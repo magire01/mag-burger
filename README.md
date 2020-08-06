@@ -1,10 +1,8 @@
 # Burger App
 
-<br>
-[https://mag-burger-master.herokuapp.com/](https://mag-burger-master.herokuapp.com/)
-<br>
-<br>
-![Main Screen](burger.png)
+[link to deployed](https://mag-burger-master.herokuapp.com/)
+
+![mainScreen](burger.png)
 <br>
 <br>
 <br>
